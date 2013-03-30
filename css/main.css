@@ -4,3 +4,16 @@ nav ul li{
     margin-right: 34px;
 }
 
+/* Image Slider*/
+
+/* First Slide */
+.bg-1 .sl-slide-inner,
+.bg-1 .sl-content-slice {
+    background: #fff;
+}
+ 
+/* Second Slide */
+.bg-2 .sl-slide-inner,
+.bg-2 .sl-content-slice {
+    background: #000;
+}
