@@ -6,18 +6,33 @@
     <link href="css/main.css" rel="stylesheet" />
     <link href="js/gumby/css/gumby.css" rel="stylesheet" />
     <link href="js/gumby/css/style.css" rel="stylesheet" />
-    <link href="js/FullscreenSlitSlider/css/style.css" rel="stylesheet" />
+    <link href="js/superslides-0.5.2/dist/stylesheets/superslides.css" rel="stylesheet" />
+    <script src="js/jquery-1.9.1.js"></script>
     <script src="js/modernizr2.6.2.js"></script>
     <script src="js/gumby/js/libs/gumby.js"></script>
-    <script src="js/FullscreenSlitSlider"></script>
+    <script src="js/jsImgSlider/themes/1/js-image-slider.js"></script>
+    <script src="js/superslides-0.5.2/dist/jquery.superslides.js"></script>
     
+<script>
+        $(document).ready(function () {
+            $('#slides').superslides({
+                slide_speed: 900,
+                pagination: true,
+                hashchange: true,
+                scrollable: true,
+                pagination: false,
+                play: 6000
+            });
 
+});
+</script>
 
 </head>
 
 
 <body>
     <header>
+
         <nav id="navbar-main-nav1" class="navbar">
             <div class="row">
                 <h1 class="four columns logo">
@@ -46,63 +61,22 @@
         </nav>
     </header>
 
-    <!-- Front Page image slider -->
-    <div id="slider" class="sl-slider-wrapper">
-        <div class="sl-slider">
-            <div class="sl-slide-bg-1 sl-slide-horizontal">
-                <div class="sl-slide-inner">
-                    <div class="deco" data-icon="H">
-                        <h2>Test slide</h2>
-                        <blockquote>
-                            <p>
-                                Just testing slider capabilities
-                            </p>
-
-                        </blockquote>
-                    </div>
+ 
+    <div id="slides">
+    <div class="slides-container">
+        <img src="img/creative-photography-19.jpg" />
+        <img src="img/Photo_Booth_Stock_by_corelila.jpg" />
+  </div>
+</div>
 
 
-                </div>
-                <div class="sl-slide bg-2">
-                    <div class="sl-slide-inner">
-                        <div class="deco" data-icon="q"></div>
-                        <h2>Regula aurea</h2>
-                        <blockquote>
-                            <p>Until he extends the circle...</p>
-                            <cite>Albert Schweitzer</cite>
-                        </blockquote>
-                    </div>
-                </div>
-
-                <div class="sl-slide bg-2">
-                    <!-- ... -->
-                </div>
-
-                <!-- ... -->
-
-            </div>
-
-            <nav id="nav-arrows" class="nav-arrows">
-                <span class="nav-arrow-prev">Previous</span>
-                <span class="nav-arrow-next">Next</span>
-            </nav>
-
-            <nav id="nav-dots" class="nav-dots">
-                <span class="nav-dot-current"></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-            </nav>
-
-
-        </div>
+    
 
 
 
 
 
-    </div>
+  
 
 </body>
 
