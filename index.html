@@ -10,22 +10,19 @@
     <script src="js/jquery-1.9.1.js"></script>
     <script src="js/modernizr2.6.2.js"></script>
     <script src="js/gumby/js/libs/gumby.js"></script>
-    <script src="js/jsImgSlider/themes/1/js-image-slider.js"></script>
     <script src="js/superslides-0.5.2/dist/jquery.superslides.js"></script>
-    
-<script>
+
+    <script>
         $(document).ready(function () {
             $('#slides').superslides({
-                slide_speed: 900,
+                slide_speed: 800,
                 pagination: true,
                 hashchange: true,
-                scrollable: true,
-                pagination: false,
-                play: 6000
+                scrollable: true
             });
 
 });
-</script>
+    </script>
 
 </head>
 
@@ -61,22 +58,25 @@
         </nav>
     </header>
 
- 
+
     <div id="slides">
-    <div class="slides-container">
-        <img src="img/creative-photography-19.jpg" />
-        <img src="img/Photo_Booth_Stock_by_corelila.jpg" />
-  </div>
-</div>
+        <ul class="slides-container">
+            <li>
+                <img src="img/creative-photography-19.jpg" />
+            </li>
+            <li>
+                <img src="img/Photo_Booth_Stock_by_corelila.jpg" /></li>
+    </ul>
+    </div>
 
 
-    
 
 
 
 
 
-  
+
+
 
 </body>
 
