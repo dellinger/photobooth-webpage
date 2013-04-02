@@ -21,7 +21,58 @@
                 scrollable: true
             });
 
-});
+        });
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".contactLink").click(function () {
+                if ($("#contactForm").is(":hidden")) {
+                    $("#contactForm").slideDown("slow");
+                }
+                else {
+                    $("#contactForm").slideUp("slow");
+                }
+            });
+        });
+        function closeForm() {
+            $("#messageSent").show("slow");
+            setTimeout('$("#messageSent").hide();$("#contactForm").slideUp("slow")', 2000);
+        }
+
+        $(document).ready(function () {
+            function filterPath(string) {
+                return string
+                  .replace(/^\//, '')
+                  .replace(/(index|default).[a-zA-Z]{3,4}$/, '')
+                  .replace(/\/$/, '');
+            }
+            $('a[href*=#]').each(function () {
+                if (filterPath(location.pathname) == filterPath(this.pathname)
+                && location.hostname == this.hostname
+                && this.hash.replace(/#/, '')) {
+                    var $targetId = $(this.hash), $targetAnchor = $('[name=' + this.hash.slice(1) + ']');
+                    var $target = $targetId.length ? $targetId : $targetAnchor.length ? $targetAnchor : false;
+                    if ($target) {
+                        var targetOffset = $target.offset().top;
+                        $(this).click(function () {
+                            $('html, body').animate({ scrollTop: targetOffset }, 1000);
+                            var d = document.createElement("div");
+                            d.style.height = "101%";
+                            d.style.overflow = "hidden";
+                            document.body.appendChild(d);
+                            window.scrollTo(0, scrollToM);
+                            setTimeout(function () {
+                                d.parentNode.removeChild(d);
+                            }, 10);
+                            return false;
+                        });
+                    }
+                }
+            });
+        });
+        /*! Smooth Scroll - v1.4.5 - 2012-07-22
+        * Copyright (c) 2012 Karl Swedberg; Licensed MIT, GPL */
     </script>
 
 </head>
@@ -41,16 +92,16 @@
                 <nav class="seven columns pull_right">
                     <ul id="main-nav1">
                         <li>
-                            <div class="medium default btn"><a href="#">About</a></div>
+                            <div class="medium default btn"><a href="#about">About</a></div>
                         </li>
                         <li>
-                            <div class="medium default btn"><a href="#">Services</a></div>
+                            <div class="medium default btn"><a href="#services">Services</a></div>
                         </li>
                         <li>
-                            <div class="medium default btn"><a href="#">Events</a></div>
+                            <div class="medium default btn"><a href="#events">Events</a></div>
                         </li>
                         <li>
-                            <div class="medium default btn"><a href="#">Contact</a></div>
+                            <div class="medium default btn"><a href="#contact">Contact</a></div>
                         </li>
                     </ul>
                 </nav>
@@ -59,14 +110,37 @@
     </header>
 
 
-    <div id="slides">
-        <ul class="slides-container">
-            <li>
-                <img src="img/creative-photography-19.jpg" />
-            </li>
-            <li>
-                <img src="img/Photo_Booth_Stock_by_corelila.jpg" /></li>
-    </ul>
+    <div id="page0">
+        <div id="slides">
+            <ul class="slides-container">
+                <li>
+                    <img src="img/creative-photography-19.jpg" />
+                </li>
+                <li>
+                    <img src="img/Photo_Booth_Stock_by_corelila.jpg" /></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="page1">
+        <a id="about"></a>
+        About page content goes here
+    </div>
+
+    <div id="page2">
+        <a id="services"></a>
+        Services page content goes here
+    </div>
+
+    <div id="page3">
+        <a id="events"></a>
+        Events page content goes here
+    </div>
+
+    <div id="page4">
+        <a id="contact"></a>
+        Contact page content goes here
+
     </div>
 
 
