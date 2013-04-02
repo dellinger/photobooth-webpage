@@ -4,6 +4,10 @@ nav ul li{
     margin-right: 34px;
 }
 
+.navbar {
+    position: fixed;
+}
+
 /* Image Slider*/
 
 /* First Slide */
