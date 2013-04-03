@@ -75,6 +75,29 @@
         * Copyright (c) 2012 Karl Swedberg; Licensed MIT, GPL */
     </script>
 
+
+
+    <script type="text/javascript"> /* Scroll Up Button */
+        $(document).ready(function(){ 
+ 
+            $(window).scroll(function(){
+                if ($(this).scrollTop() > 100) {
+                    $('.scrollup').fadeIn();
+                } else {
+                    $('.scrollup').fadeOut();
+                }
+            }); 
+ 
+            $('.scrollup').click(function(){
+                $("html, body").animate({ scrollTop: 0 }, 600);
+                return false;
+            });
+ 
+        });
+    </script>
+
+
+
 </head>
 
 
@@ -143,7 +166,7 @@
     </div>
 
 
-
+    <a href="#" class="scrollup" style="background-image: url(img/up.png);">Scroll</a> <!-- Scroll Up Button -->
 
 
 
