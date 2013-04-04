@@ -30,6 +30,8 @@ nav ul li{
 
 #page1 {
     height: 1000px;
+    margin-right: 100px;
+    margin-left: 100px;
 }
 
 #page2 {
@@ -42,6 +44,19 @@ nav ul li{
 
 #page4 {
     height: 1000px;
+}
+
+.left { float: left; margin: 0 .5em .5em 0; }
+.right { float: right; margin: 0 0 .5em .5em; }
+
+
+#aboutContent .col {
+    float: left;
+}
+
+#aboutImg {
+    float: right;
+    display: inline-block;
 }
 
 

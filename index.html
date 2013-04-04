@@ -25,21 +25,21 @@
     </script>
 
     <script type="text/javascript"> /* Scroll Up Button */
-        $(document).ready(function(){ 
- 
-            $(window).scroll(function(){
+        $(document).ready(function () {
+
+            $(window).scroll(function () {
                 if ($(this).scrollTop() > 100) {
                     $('.scrollup').fadeIn();
                 } else {
                     $('.scrollup').fadeOut();
                 }
-            }); 
- 
-            $('.scrollup').click(function(){
+            });
+
+            $('.scrollup').click(function () {
                 $("html, body").animate({ scrollTop: 0 }, 600);
                 return false;
             });
- 
+
         });
     </script>
 
@@ -79,23 +79,57 @@
     </header>
 
 
-   <div id="page0">
+    <div id="page0">
         <div id="slides">
             <ul class="slides-container">
                 <li>
-                    <div style="background-color:cyan; height:1000px;"></div>
+                    <div style="background-color: cyan; height: 1000px;"></div>
                     <!-- <img src="img/creative-photography-19.jpg" /> -->
                 </li>
                 <li>
-                    <div style="background-color:green; height:1000px;"></div>
-                   <!-- <img src="img/Photo_Booth_Stock_by_corelila.jpg" /></li> -->
+                    <div style="background-color: green; height: 1000px;"></div>
+                    <!-- <img src="img/Photo_Booth_Stock_by_corelila.jpg" /></li> -->
             </ul>
         </div>
     </div>
- 
+
     <div id="page1">
         <a id="about"></a>
-        About page content goes here
+        <h2 id="aboutHeader">About</h2>
+        <div id="aboutContent">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Curabitur consequat magna vitae velit vestibulum commodo. 
+        Pellentesque tempus orci a sapien consectetur quis posuere orci euismod. 
+        Etiam pharetra sapien sed neque vehicula venenatis. 
+        Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia 
+        Curae; Pellentesque vel nibh in tellus accumsan fringilla. 
+        Fusce eu eleifend sem. Etiam sodales, mauris sed adipiscing pretium, 
+        enim augue scelerisque turpis, ac tempor nibh diam et magna. 
+        Suspendisse vel nibh orci, a tempor risus. Sed suscipit lacinia risus, 
+        eget vulputate neque pulvinar ut. Nullam ut suscipit mi. Maecenas blandit, 
+        orci eget euismod laoreet, elit neque fringilla quam, ut elementum lorem 
+        felis vitae lacus. Morbi mollis massa id ligula faucibus porta. 
+        Donec ultrices venenatis consequat. Donec consequat mauris vel nisi 
+        imperdiet et suscipit nisl convallis. Sed tristique vehicula elit sed consequat. Pellentesque quis ante sapien.
+        <br />
+        <br />
+
+        <img src="http://placehold.it/480" class="right" />
+                Integer consequat turpis non neque aliquet eu tempor lacus consectetur. Ut ac nunc lacus, at fringilla tellus. Cum sociis natoque penatibus et magnis dis parturient montes, 
+        nascetur ridiculus mus. Nulla eu faucibus diam. Morbi placerat nisi eu leo interdum id tincidunt augue ultrices. Maecenas vestibulum cursus velit vel vulputate. 
+        Sed in ipsum id diam blandit interdum. Sed quis dolor elit. Phasellus vel leo nec libero vehicula elementum. Sed ut arcu lectus, nec lacinia tellus.
+            <br />
+                <br />
+                Integer ultrices, elit nec blandit tincidunt, lacus justo sollicitudin ligula, at euismod elit sapien non mauris. Etiam in elit et libero varius pulvinar in et erat. 
+        Curabitur bibendum mauris quis magna dapibus in iaculis velit rutrum. Mauris vitae sem vitae augue cursus iaculis a ac diam. 
+        Praesent congue fermentum nisl, suscipit vehicula risus dapibus eget. Sed semper mattis consectetur. 
+        Curabitur molestie elementum arcu eget aliquet. Integer in libero enim, in pellentesque sem. Aenean nec magna mi. 
+        Suspendisse tempus leo non neque porta lobortis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+            </p>
+
+
+        </div>
     </div>
 
     <div id="page2">
@@ -115,7 +149,8 @@
     </div>
 
 
-    <a href="#" class="scrollup" style="background-image: url(img/up.png);">Scroll</a> <!-- Scroll Up Button -->
+    <a href="#" class="scrollup" style="background-image: url(img/up.png);">Scroll</a>
+    <!-- Scroll Up Button -->
 
 
 
