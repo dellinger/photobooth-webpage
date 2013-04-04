@@ -1,15 +1,43 @@
-nav ul li{
-	display: inline;
-    list-style-type: none;
-    margin-right: 34px;
-}
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900);
 
-.navbar {
+
+header {
+    background-color: #34495e;
     position: fixed;
-    height: 70px;
+    height: 63px;
     z-index: 9999;
+    width: 100%;
 }
 
+.main-nav {
+    display: inline;
+    list-style-type: none;
+    position: relative;
+}
+
+.main-nav li {
+    float: left;
+    padding: 15px;
+    padding-top: 20px;
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size: 28px;
+
+}
+
+
+.line {
+    height: 3px;
+    width: 100%;
+    background-color: #2c3e50;
+    position: relative;
+}
+
+.logo {
+    height: 63px;
+    background-color: #e74c3c;
+}
 /* Image Slider*/
 
 /* First Slide */
