@@ -18,17 +18,6 @@
     <script src="js/nivo-slider/jquery.nivo.slider.pack.js"></script>
     <script src="js/smooth_scroll_1.4.5.js"></script>
 
-    <script>
-        $(document).ready(function () {
-            $('#slides').superslides({
-                slide_speed: 800,
-                pagination: true,
-                hashchange: true,
-                scrollable: true
-            });
-        });
-    </script>
-
     <script type="text/javascript"> /* Scroll Up Button */
         $(document).ready(function () {
 
@@ -53,17 +42,16 @@
             jQuery(window).load(function () {
                 $("#slider").nivoSlider({
                     effect: "fade",
-                    slices: 10,
                     boxCols: 10,
                     boxRows: 10,
                     animSpeed: 600,
-                    pauseTime: 3500,
+                    pauseTime: 3000,
                     startSlide: 0,
                     directionNav: true,
                     controlNav: true,
                     controlNavThumbs: false,
                     pauseOnHover: false,
-                    manualAdvance: true
+                    manualAdvance: false
                 });
         });
     </script>
