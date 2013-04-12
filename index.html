@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="js/nivo-slider/themes/default/default.css" type="text/css"
         media="screen" />
     <link rel="stylesheet" href="js/nivo-slider/nivo-slider.css" type="text/css" media="screen" />
-    <link rel="stylesheet" href="style.css" type="text/css" media="screen" />
     <link href="js/superslides-0.5.2/dist/stylesheets/superslides.css" rel="stylesheet" />
     <script src="js/jquery-1.9.1.js"></script>
     <script src="js/modernizr2.6.2.js"></script>
@@ -187,8 +186,10 @@
         </div>
     </div>
     <hr />
-    <div id="contact" class="row">
-        <h2 id="contactsHeader">Contact</h2>
+    <div id="contact">
+        
+        <div class="row">
+            <h2 id="contactsHeader">Contact</h2>
         <div id="contactContent" class="twelve columns">
             <div>
                 <p>
@@ -208,6 +209,8 @@
                 </p>
             </div>
         </div>
+            </div>
+        <div class="row">
         <div class="three columns">
             <h3>Address:</h3>
             1189 Waverly Place<br />
@@ -224,8 +227,27 @@
             <br />
             <img src="http://placehold.it/120" />
         </div>
-        <!--<div class="two columns">-->
-        <div class ="three columns">
+
+        <div class="three columns">
+            Send us a message
+        <ul>
+            <li class="field">
+                Name
+                <input class="text input" type="text" placeholder="Enter Name" /></li>
+            <li class="field">
+                Phone
+                <input class="phone input" type="tel" placeholder="Enter Phone" />
+            </li>
+            <li class="field">
+                Email
+                <input class="email input" type="email" placeholder="Enter Email" /></li>
+            
+        </ul>
+ </div>
+
+
+
+<!--        <div class ="three columns">
             <p>
                 Send us a message
             </p>
@@ -240,19 +262,16 @@
                 <br />
             <input type="email" id="email_contact" name="email_contact" placeholder="Enter Email"
                 required />
-        </div>
+        </div>-->
         <!--<div class="push_two one columns">-->
         <div class="three columns">
-            <br />
-            <br />
             Message
-                <br />
-            <textarea id="message_contact" rows="10" cols="40" placeholder="Enter your message here..."></textarea>
+            <textarea class="input textarea" placeholder="Enter your message here..." rows="13" cols="35"></textarea>
             <br />
-            <input type="submit" id="submit_contact_btn" value="Send!" />
+            <div id="contactSubmitOuter" class="pretty medium default btn"><input id="contactSubmitInner" type="submit" value="Send!" /></div>
         </div>
     </div>
-
+        </div>
     </div>
     <!-- End container div -->
 

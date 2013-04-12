@@ -121,3 +121,12 @@ input {
 input[type=submit] {
   padding:10px;
 }
+
+#contactSubmitOuter {
+    background: #34495e;
+}
+
+#contactSubmitInner {
+    font-weight: bold;
+    color: white;
+}
