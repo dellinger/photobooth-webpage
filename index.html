@@ -53,46 +53,48 @@
     </script>
 </head>
 <body>
-    <header>
-        <!--<div class="container">
+    <div class="container">
+        <header>
             <div class="row">
-                <div class="two columns logo">
-                </div>-->
-        <!--<nav class="push_three seven columns">-->
-        <nav>
-            <ul class="main-nav">
-                <a href="#about">
-                    <li>About</li>
-                </a><a href="#services">
-                    <li>Services</li>
-                </a><a href="#events">
-                    <li>Events</li>
-                </a><a href="#contact">
-                    <li>Contact</li>
-                </a>
-            </ul>
-        </nav>
-        <div class="line">
-        </div>
-    </header>
-    <!--<div class="row">
-        <div class="sixteen columns">-->
-    <div id="slider-wrapper">
-        <div class="slider-wrapper theme-default">
-            <div id="slider" class="nivoSlider">
-                <img src="img/toystory.jpg" data-thumb="img/toystory.jpg" alt="" />
-                <img src="img/up.jpg" data-thumb="img/up.jpg" alt="" />
-                <img src="img/walle.jpg" data-thumb="img/walle.jpg" data-transition="slideInLeft" />
-                <img src="img/nemo.jpg" data-thumb="img/nemo.jpg" alt="" />
+                <div class="two columns logo"></div>
+                <nav class="push_three seven columns">
+                    <ul class="main-nav">
+                        <a href="#about">
+                            <li>About</li>
+                        </a><a href="#services">
+                            <li>Services</li>
+                        </a><a href="#events">
+                            <li>Events</li>
+                        </a><a href="#contact">
+                            <li>Contact</li>
+                        </a>
+                    </ul>
+                </nav>
+                <div class="line">
+                </div>
+            </div>
+            <!-- End row div -->
+        </header>
+
+        <!-- Not wrapped in gumby grid -- couldn't get it to size correctly -->
+        <div id="slider-wrapper">
+            <div class="slider-wrapper theme-default">
+                <div id="slider" class="nivoSlider">
+                    <img src="img/toystory.jpg" data-thumb="img/toystory.jpg" alt="" />
+                    <img src="img/up.jpg" data-thumb="img/up.jpg" alt="" />
+                    <img src="img/walle.jpg" data-thumb="img/walle.jpg" data-transition="slideInLeft" />
+                    <img src="img/nemo.jpg" data-thumb="img/nemo.jpg" alt="" />
+                </div>
             </div>
         </div>
-    </div>
-    <div id="page1">
-        <a id="about"></a>
-        <h2 id="aboutHeader">About</h2>
-        <div id="aboutContent">
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur consequat magna
+
+        <div id="page1" class="row">
+            <a id="about"></a>
+            <h2 id="aboutHeader">About</h2>
+            <div id="aboutContent">
+                <div class="eight columns">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur consequat magna
                 vitae velit vestibulum commodo. Pellentesque tempus orci a sapien consectetur quis
                 posuere orci euismod. Etiam pharetra sapien sed neque vehicula venenatis. Vestibulum
                 ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque
@@ -104,18 +106,18 @@
                 id ligula faucibus porta. Donec ultrices venenatis consequat. Donec consequat mauris
                 vel nisi imperdiet et suscipit nisl convallis. Sed tristique vehicula elit sed consequat.
                 Pellentesque quis ante sapien.
-                <br />
-                <br />
-                <img src="http://placehold.it/480" class="right" />
-                Integer consequat turpis non neque aliquet eu tempor lacus consectetur. Ut ac nunc
+                    </p>
+
+                    <p>
+                        Integer consequat turpis non neque aliquet eu tempor lacus consectetur. Ut ac nunc
                 lacus, at fringilla tellus. Cum sociis natoque penatibus et magnis dis parturient
                 montes, nascetur ridiculus mus. Nulla eu faucibus diam. Morbi placerat nisi eu leo
                 interdum id tincidunt augue ultrices. Maecenas vestibulum cursus velit vel vulputate.
                 Sed in ipsum id diam blandit interdum. Sed quis dolor elit. Phasellus vel leo nec
                 libero vehicula elementum. Sed ut arcu lectus, nec lacinia tellus.
-                <br />
-                <br />
-                Integer ultrices, elit nec blandit tincidunt, lacus justo sollicitudin ligula, at
+                    </p>
+                    <p>
+                        Integer ultrices, elit nec blandit tincidunt, lacus justo sollicitudin ligula, at
                 euismod elit sapien non mauris. Etiam in elit et libero varius pulvinar in et erat.
                 Curabitur bibendum mauris quis magna dapibus in iaculis velit rutrum. Mauris vitae
                 sem vitae augue cursus iaculis a ac diam. Praesent congue fermentum nisl, suscipit
@@ -123,11 +125,17 @@
                 arcu eget aliquet. Integer in libero enim, in pellentesque sem. Aenean nec magna
                 mi. Suspendisse tempus leo non neque porta lobortis. Class aptent taciti sociosqu
                 ad litora torquent per conubia nostra, per inceptos himenaeos.
-            </p>
+                    </p>
+                </div>
+                <div class=" four columns">
+                    <img src="http://placehold.it/480" />
+                </div>
+            </div>
         </div>
-    </div>
+
     <hr />
-    <div id="page2">
+
+    <div id="page2" class="row">
         <a id="services"></a>
         <h2 id="servicesHeader">Services</h2>
         <div id="servicesContent">
@@ -136,7 +144,8 @@
                 vitae velit vestibulum commodo. Pellentesque tempus orci a sapien consectetur quis
                 posuere orci euismod.
             </p>
-            <div>
+
+            <div class="three columns">
                 <img src="http://placehold.it/175" />
                 <p>
                     Integer ultrices, elit nec blandit tincidunt, lacus justo sollicitudin ligula, at
@@ -144,7 +153,7 @@
                 Curabitur bibendum mauris quis magna dapibus in iaculis velit rutrum.
                 </p>
             </div>
-            <div>
+            <div class="three columns">
                 <img src="http://placehold.it/175" />
                 <p>
                     Integer ultrices, elit nec blandit tincidunt, lacus justo sollicitudin ligula, at
@@ -152,7 +161,7 @@
                 Curabitur bibendum mauris quis magna dapibus in iaculis velit rutrum.
                 </p>
             </div>
-            <div>
+            <div class="three columns">
                 <img src="http://placehold.it/175" />
                 <p>
                     Integer ultrices, elit nec blandit tincidunt, lacus justo sollicitudin ligula, at
@@ -164,10 +173,10 @@
 
     </div>
     <hr />
-    <div id="page3">
+    <div id="page3" class="row">
         <a id="events"></a>
         <h2 id="eventsHeader">Events</h2>
-        <div id="eventsContent">
+        <div id="eventsContent" class="twelve columns">
             <p>
                 Integer ultrices, elit nec blandit tincidunt, lacus justo sollicitudin ligula, at
                 euismod elit sapien non mauris. Etiam in elit et libero varius pulvinar in et erat.
@@ -182,15 +191,11 @@
         </div>
     </div>
     <hr />
-    <div id="page4">
+    <div id="page4" class="row">
         <a id="contact"></a>
         <h2 id="contactsHeader">Contact</h2>
-        <!--<div class="row">
-            <div class="twenty columns">-->
-        <div id="contactContent">
+        <div id="contactContent" class="twelve columns">
             <div>
-
-
                 <p>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur consequat magna
@@ -207,11 +212,8 @@
                     vel nibh in tellus accumsan fringilla. Fusce eu eleifend sem.
                 </p>
             </div>
-            <hr />
         </div>
-        <!--<div class="row">
-            <div class="three columns">-->
-        <div>
+        <div class="three columns">
             <h3>Address:</h3>
             1189 Waverly Place<br />
             Schenectady NY, 12308
@@ -222,13 +224,13 @@
             <a href="mailto:david.ellinger@me.com">david.ellinger@me.com</a>
         </div>
         <!--<div class="one columns">-->
-        <div>
+        <div class ="three columns">
             <br />
             <br />
             <img src="http://placehold.it/120" />
         </div>
         <!--<div class="two columns">-->
-        <div>
+        <div class ="three columns">
             <p>
                 Send us a message
             </p>
@@ -245,7 +247,7 @@
                 required />
         </div>
         <!--<div class="push_two one columns">-->
-        <div>
+        <div class="three columns">
             <br />
             <br />
             Message
@@ -256,7 +258,8 @@
         </div>
     </div>
 
-
+    </div>
+    <!-- End container div -->
 
 
     <a href="#" class="scrollup" style="background-image: url(img/up.png);">Scroll</a>
