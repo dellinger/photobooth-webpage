@@ -7,11 +7,15 @@
     <link rel="stylesheet" href="js/nivo-slider/themes/default/default.css" type="text/css"
         media="screen" />
     <link rel="stylesheet" href="js/nivo-slider/nivo-slider.css" type="text/css" media="screen" />
+    <link href="js/MovingBoxes-master/css/movingboxes.css" rel="stylesheet" />
     <script src="js/jquery-1.9.1.js"></script>
     <script src="js/modernizr2.6.2.js"></script>
     <script src="js/gumby/js/libs/gumby.js"></script>
     <script src="js/nivo-slider/jquery.nivo.slider.pack.js"></script>
+    <script src="js/MovingBoxes-master/js/jquery.movingboxes.js"></script>
+    <script src="js/MovingBoxes-master/js/jquery.easing.1.2.js"></script>
     <script src="js/smooth_scroll_1.4.5.js"></script>
+
     <script type="text/javascript">        /* Scroll Up Button */
         $(document).ready(function () {
 
@@ -28,11 +32,87 @@
                 return false;
             });
 
+            $('#eventSlider').movingBoxes({
+
+                // **** Appearance ****
+                // start with this panel
+                startPanel: 1,
+                // non-current panel size: 80% of panel size
+                reducedSize: 0.8,
+                // if true, slider height set to max panel height; 
+                // if false, height will auto adjust.
+                fixedHeight: false,
+
+                // **** Behaviour ****
+                // if true, movingBoxes will initialize, then animate into the
+                // starting slide (if not the first slide)
+                initAnimation: true,
+                // if true, movingBoxes will force the animation to complete
+                // immediately, if the user selects the next panel
+                stopAnimation: false,
+                // if true, hash tags are enabled
+                hashTags: true,
+                // if true, the panel will loop through the panels infinitely
+                wrap: false,
+                // if true, navigation links will be added
+                buildNav: true,
+                // function which returns the navigation text for each panel
+                navFormatter: function (index, panel) {
+                    return "&#9679;" // bullets
+                },
+                // anything other than "linear" or "swing" requires the easing plugin
+                easing: 'swing',
+
+                // **** Times ****
+                // animation time in milliseconds
+                speed: 500,
+                // time to delay in milliseconds before MovingBoxes animates
+                // to the selected panel
+                delayBeforeAnimate: 0,
+
+                // **** Selectors & classes ****
+                // current panel class
+                currentPanel: 'current',
+                // added to the navigation, but the title attribute is blank unless
+                // the link text-indent is negative
+                tooltipClass: 'tooltip',
+                // class added to arrows that are disabled (left arrow when on first
+                // panel, right arrow on last panel)
+                disabled: 'disabled',
+
+                // **** Callbacks ****
+                // e = event, slider = MovingBoxes Object, tar = current panel #
+                // callback after the basic MovingBoxes structure has been built;
+                // before "initialized"
+                preinit: function (e, slider, tar) { },
+                // callback when MovingBoxes has completed initialization
+                initialized: function (e, slider, tar) { },
+                // callback upon change panel initialization
+                initChange: function (e, slider, tar) {
+                    // alert( 'Changing panels to #' + tar );
+                },
+                // callback before any animation occurs
+                beforeAnimation: function (e, slider, tar) { },
+                // callback after animation completes
+                completed: function (e, slider, tar) {
+                    // get name from title
+                    // var name = slider.$panels.eq(tar-1).find('h2').text().split(' ')[0]; 
+                    // alert( "Now on " + name + "'s panel" );
+                }
+
+                // **** Deprecated options ****
+                // overall width of movingBoxes
+                // width: 300, // Deprecated, but still works in v2.2.2+
+                // current panel width adjusted to 50% of overall width
+                // panelWidth: 0.5, // Deprecated, but still works in v2.2.2+   
+            });
+
         });
     </script>
-    <script type="text/javascript">
 
+    <script type="text/javascript">
         jQuery(window).load(function () {
+
             $("#slider").nivoSlider({
                 effect: "fade",
                 boxCols: 10,
@@ -46,8 +126,15 @@
                 pauseOnHover: false,
                 manualAdvance: false
             });
+
+
+          
+
         });
     </script>
+
+    
+
 </head>
 <body>
     <div class="container">
@@ -82,7 +169,7 @@
                     <img src="img/nemo.jpg" data-thumb="img/nemo.jpg" alt="" />
                 </div>
             </div>
-            
+
         </div>
 
         <div id="about" class="row">
@@ -129,123 +216,142 @@
             </div>
         </div>
 
-    <hr />
+        <hr />
 
-    <div id="services" class="row">
-        <h2 id="servicesHeader">Services</h2>
-        <div id="servicesContent">
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur consequat magna
+        <div id="services" class="row">
+            <h2 id="servicesHeader">Services</h2>
+            <div id="servicesContent">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur consequat magna
                 vitae velit vestibulum commodo. Pellentesque tempus orci a sapien consectetur quis
                 posuere orci euismod.
-            </p>
-
-            <div class="three columns">
-                <img src="http://placehold.it/175" />
-                <p>
-                    Integer ultrices, elit nec blandit tincidunt, lacus justo sollicitudin ligula, at
-                euismod elit sapien non mauris. Etiam in elit et libero varius pulvinar in et erat.
-                Curabitur bibendum mauris quis magna dapibus in iaculis velit rutrum.
                 </p>
-            </div>
-            <div class="three columns">
-                <img src="http://placehold.it/175" />
-                <p>
-                    Integer ultrices, elit nec blandit tincidunt, lacus justo sollicitudin ligula, at
-                euismod elit sapien non mauris. Etiam in elit et libero varius pulvinar in et erat.
-                Curabitur bibendum mauris quis magna dapibus in iaculis velit rutrum.
-                </p>
-            </div>
-            <div class="three columns">
-                <img src="http://placehold.it/175" />
-                <p>
-                    Integer ultrices, elit nec blandit tincidunt, lacus justo sollicitudin ligula, at
-                euismod elit sapien non mauris. Etiam in elit et libero varius pulvinar in et erat.
-                Curabitur bibendum mauris quis magna dapibus in iaculis velit rutrum.
-                </p>
-            </div>
-        </div>
 
-    </div>
-    <hr />
-    <div id="events" class="row">
-        <h2 id="eventsHeader">Events</h2>
-        <div id="eventsContent" class="twelve columns">
-            <p>
-                Integer ultrices, elit nec blandit tincidunt, lacus justo sollicitudin ligula, at
+                <div class="three columns">
+                    <img src="http://placehold.it/175" />
+                    <p>
+                        Integer ultrices, elit nec blandit tincidunt, lacus justo sollicitudin ligula, at
                 euismod elit sapien non mauris. Etiam in elit et libero varius pulvinar in et erat.
                 Curabitur bibendum mauris quis magna dapibus in iaculis velit rutrum.
-            </p>
-            <div>
-                <div>SOME TYPE OF IMAGE SLIDER</div>
+                    </p>
+                </div>
+                <div class="three columns">
+                    <img src="http://placehold.it/175" />
+                    <p>
+                        Integer ultrices, elit nec blandit tincidunt, lacus justo sollicitudin ligula, at
+                euismod elit sapien non mauris. Etiam in elit et libero varius pulvinar in et erat.
+                Curabitur bibendum mauris quis magna dapibus in iaculis velit rutrum.
+                    </p>
+                </div>
+                <div class="three columns">
+                    <img src="http://placehold.it/175" />
+                    <p>
+                        Integer ultrices, elit nec blandit tincidunt, lacus justo sollicitudin ligula, at
+                euismod elit sapien non mauris. Etiam in elit et libero varius pulvinar in et erat.
+                Curabitur bibendum mauris quis magna dapibus in iaculis velit rutrum.
+                    </p>
+                </div>
             </div>
-
 
         </div>
-    </div>
-    <hr />
-    <div id="contact">
-        
-        <div class="row">
-            <h2 id="contactsHeader">Contact</h2>
-        <div id="contactContent" class="twelve columns">
-            <div>
+        <hr />
+        <div id="events" class="row">
+            <h2 id="eventsHeader">Events</h2>
+            <div id="eventsContent" class="twelve columns">
                 <p>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur consequat magna
+                    Integer ultrices, elit nec blandit tincidunt, lacus justo sollicitudin ligula, at
+                euismod elit sapien non mauris. Etiam in elit et libero varius pulvinar in et erat.
+                Curabitur bibendum mauris quis magna dapibus in iaculis velit rutrum.
+                </p>
+                <div> <!-- start slider -->
+                    <ul id="eventSlider">
+
+                        <li>
+                            <img src="http://placehold.it/175" alt="picture" />
+                            <h2>Weddings</h2>
+                            <p>A very short exerpt goes here about weddings</p>
+                        </li>
+
+                        <li>
+                            <img src="http://placehold.it/175" alt="picture" />
+                            <h2>Birthdays</h2>
+                            <p>A very short exerpt goes here about birthdays</p>
+                        </li>
+
+                        <li>
+                            <img src="http://placehold.it/175" alt="picture" />
+                            <h2>Prom</h2>
+                            <p>A very short exerpt goes here about proms</p>
+                        </li>
+
+                    </ul>
+
+
+                </div> <!-- End slider -->
+
+
+            </div>
+        </div>
+        <hr />
+        <div id="contact">
+
+            <div class="row">
+                <h2 id="contactsHeader">Contact</h2>
+                <div id="contactContent" class="twelve columns">
+                    <div>
+                        <p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur consequat magna
                     vitae velit vestibulum commodo. Pellentesque tempus orci a sapien consectetur quis
                     posuere orci euismod. Etiam pharetra sapien sed neque vehicula venenatis. Vestibulum
                     ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque
                     vel nibh in tellus accumsan fringilla. Fusce eu eleifend sem.
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur consequat magna
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur consequat magna
                     vitae velit vestibulum commodo. Pellentesque tempus orci a sapien consectetur quis
                     posuere orci euismod. Etiam pharetra sapien sed neque vehicula venenatis. Vestibulum
                     ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque
                     vel nibh in tellus accumsan fringilla. Fusce eu eleifend sem.
-                </p>
+                        </p>
+                    </div>
+                </div>
             </div>
-        </div>
-            </div>
-        <div class="row">
-        <div class="three columns">
-            <h3>Address:</h3>
-            1189 Waverly Place<br />
-            Schenectady NY, 12308
+            <div class="row">
+                <div class="three columns">
+                    <h3>Address:</h3>
+                    1189 Waverly Place<br />
+                    Schenectady NY, 12308
                 <h3>Phone:</h3>
-            (518)335-4357
+                    (518)335-4357
                 <h3>Email:
                 </h3>
-            <a href="mailto:david.ellinger@me.com">david.ellinger@me.com</a>
-        </div>
-        <!--<div class="one columns">-->
-        <div class ="three columns">
-            <br />
-            <br />
-            <img src="http://placehold.it/120" />
-        </div>
+                    <a href="mailto:david.ellinger@me.com">david.ellinger@me.com</a>
+                </div>
+                <!--<div class="one columns">-->
+                <div class="three columns">
+                    <br />
+                    <br />
+                    <img src="http://placehold.it/120" />
+                </div>
 
-        <div class="three columns">
-            Send us a message
+                <div class="three columns">
+                    Send us a message
         <ul>
-            <li class="field">
-                Name
+            <li class="field">Name
                 <input class="text input" type="text" placeholder="Enter Name" /></li>
-            <li class="field">
-                Phone
+            <li class="field">Phone
                 <input class="phone input" type="tel" placeholder="Enter Phone" />
             </li>
-            <li class="field">
-                Email
+            <li class="field">Email
                 <input class="email input" type="email" placeholder="Enter Email" /></li>
-            
+
         </ul>
- </div>
+                </div>
 
 
 
-<!--        <div class ="three columns">
+                <!--        <div class ="three columns">
             <p>
                 Send us a message
             </p>
@@ -261,14 +367,15 @@
             <input type="email" id="email_contact" name="email_contact" placeholder="Enter Email"
                 required />
         </div>-->
-        <!--<div class="push_two one columns">-->
-        <div class="three columns">
-            Message
+                <!--<div class="push_two one columns">-->
+                <div class="three columns">
+                    Message
             <textarea class="input textarea" placeholder="Enter your message here..." rows="13" cols="35"></textarea>
-            <br />
-            <div id="contactSubmitOuter" class="pretty medium default btn"><input id="contactSubmitInner" type="submit" value="Send!" /></div>
-        </div>
-    </div>
+                    <br />
+                    <div id="contactSubmitOuter" class="pretty medium default btn">
+                        <input id="contactSubmitInner" type="submit" value="Send!" /></div>
+                </div>
+            </div>
         </div>
     </div>
     <!-- End container div -->
