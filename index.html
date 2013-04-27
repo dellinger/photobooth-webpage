@@ -2,16 +2,15 @@
 <html>
 <head>
     <title>Freeze Frame Photobooth Rental </title>
+    <link href="js/bootstrap/css/bootstrap.css" rel="stylesheet" />
     <link href="css/main.css" rel="stylesheet" />
-    <link href="js/gumby/css/gumby.css" rel="stylesheet" />
-    <link rel="stylesheet" href="js/nivo-slider/themes/default/default.css" type="text/css"
-        media="screen" />
-    <link rel="stylesheet" href="js/nivo-slider/nivo-slider.css" type="text/css" media="screen" />
+
     <link href="js/MovingBoxes-master/css/movingboxes.css" rel="stylesheet" />
+
     <script src="js/jquery-1.9.1.js"></script>
     <script src="js/modernizr2.6.2.js"></script>
-    <script src="js/gumby/js/libs/gumby.js"></script>
-    <script src="js/nivo-slider/jquery.nivo.slider.pack.js"></script>
+    <script src="js/bootstrap/js/bootstrap.js"></script>
+
     <script src="js/smooth_scroll_1.4.5.js"></script>
     <script src="js/MovingBoxes-master/js/jquery.movingboxes.js"></script>
     <script src="js/MovingBoxes-master/js/jquery.easing.1.2.js"></script>
@@ -108,7 +107,7 @@
 
         });
     </script>
-    <script type="text/javascript">
+    <!--   <script type="text/javascript">
         jQuery(window).load(function () {
 
             $("#slider").nivoSlider({
@@ -125,39 +124,71 @@
                 manualAdvance: false
             });
         });
-    </script>
+    </script> -->
 </head>
 <body>
-    <div class="container">
-        <header>
-            <div class="row">
-                <div class="two columns logo">
-                </div>
-                <nav class="push_three seven columns ">
+
+
+       <div class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                     <div class="logo">
+                         <div class="span7 offset3">
                     <ul class="main-nav">
-                        <li class=skip><a href="#about">About</a></li>
-                        <li class=skip><a href="#services">Services</a></li>
-                        <li class=skip><a href="#events">Events</a></li>
-                        <li class=skip><a href="#contact">Contact</a></li>
+                        <li class="skip"><a href="#about">About</a></li>
+                        <li class="skip"><a href="#services">Services</a></li>
+                        <li class="skip"><a href="#events">Events</a></li>
+                        <li class="skip"><a href="#contact">Contact</a></li>
                     </ul>
-                </nav>
-                <div class="line">
                 </div>
-            </div>
-            <!-- End row div -->
-        </header>
-        <div id="slider-wrapper" class="row">
+                </div>
+                
+
+</div>
+
+      
+               
+                <div class="line"></div>
+
+            </div> <!-- End row div -->
+
+
+    </div>
+        <!--      <div id="slider-wrapper" class="row">
             <div class="slider-wrapper theme-default">
                 <div id="slider" class="nivoSlider">
                     <img src="img/stockphoto.jpg"  alt="" />
                 </div>
             </div>
+        </div> -->
+        <div class="container-fluid">
+        <div id="myCarousel" class="carousel slide">
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+            <!-- Carousel items -->
+            <div class="carousel-inner">
+                <div class="active item">
+                    <img src="img/nemo.jpg" />
+                </div>
+                <div class="item">
+                    <img src="img/promo1.jpg" />
+                </div>
+                <div class="item">
+                    <img src="img/promo2.jpg" /></div>
+            </div>
+            <!-- Carousel nav -->
+            <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+            <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
         </div>
-        <div class="row">
-            <h2 id="aboutHeader">
-                About</h2>
+
+        <div class="row-fluid">
+
             <div>
-                <div id="about" class="eight columns">
+                <div id="about" class="span8">
+                    <h2>About</h2>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur consequat magna
                         vitae velit vestibulum commodo. Pellentesque tempus orci a sapien consectetur quis
@@ -191,22 +222,22 @@
                         ad litora torquent per conubia nostra, per inceptos himenaeos.
                     </p>
                 </div>
-                <div class=" four columns">
-                    <img src="img/photobooth.jpg"  alt="" />
+                <div class="span4">
+                    <img src="img/photobooth.jpg" alt="" />
                 </div>
             </div>
         </div>
         <hr />
-        <div class="row">
-            <h2 id="servicesHeader">
-                Services</h2>
+
+        <div class="row-fluid">
             <div id="services">
+                <h2>Services</h2>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur consequat magna
                     vitae velit vestibulum commodo. Pellentesque tempus orci a sapien consectetur quis
                     posuere orci euismod.
                 </p>
-                <div class="three columns">
+                <div class="span3">
                     <img src="http://placehold.it/175" />
                     <p>
                         Integer ultrices, elit nec blandit tincidunt, lacus justo sollicitudin ligula, at
@@ -214,7 +245,7 @@
                         Curabitur bibendum mauris quis magna dapibus in iaculis velit rutrum.
                     </p>
                 </div>
-                <div class="three columns">
+                <div class="span3">
                     <img src="http://placehold.it/175" />
                     <p>
                         Integer ultrices, elit nec blandit tincidunt, lacus justo sollicitudin ligula, at
@@ -222,7 +253,7 @@
                         Curabitur bibendum mauris quis magna dapibus in iaculis velit rutrum.
                     </p>
                 </div>
-                <div class="three columns">
+                <div class="span3">
                     <img src="http://placehold.it/175" />
                     <p>
                         Integer ultrices, elit nec blandit tincidunt, lacus justo sollicitudin ligula, at
@@ -233,10 +264,9 @@
             </div>
         </div>
         <hr />
-        <div class="row">
-            <h2 id="eventsHeader">
-                Events</h2>
-            <div id="events" class="twelve columns">
+        <div class="row-fluid">
+            <div id="events" class="span12">
+                <h2>Events</h2>
                 <p>
                     Integer ultrices, elit nec blandit tincidunt, lacus justo sollicitudin ligula, at
                     euismod elit sapien non mauris. Etiam in elit et libero varius pulvinar in et erat.
@@ -247,31 +277,31 @@
                     <ul id="eventSlider">
                         <li>
                             <img src="img/graduation.jpg" alt="graduation" />
-                            <h2>
-                                Graduation</h2>
+                            <h2>Graduation</h2>
                             <p>
-                                A very short excert goes here about graduations</p>
+                                A very short excert goes here about graduations
+                            </p>
                         </li>
                         <li>
-                            <img src="http://placehold.it/175"  alt="wedding" />
-                            <h2>
-                                Weddings</h2>
+                            <img src="http://placehold.it/175" alt="wedding" />
+                            <h2>Weddings</h2>
                             <p>
-                                A very short exerpt goes here about weddings</p>
-                        </li>
-                        <li>
-                            <img src="http://placehold.it/175" alt="picture" />
-                            <h2>
-                                Birthdays</h2>
-                            <p>
-                                A very short exerpt goes here about birthdays</p>
+                                A very short exerpt goes here about weddings
+                            </p>
                         </li>
                         <li>
                             <img src="http://placehold.it/175" alt="picture" />
-                            <h2>
-                                Prom</h2>
+                            <h2>Birthdays</h2>
                             <p>
-                                A very short exerpt goes here about proms</p>
+                                A very short exerpt goes here about birthdays
+                            </p>
+                        </li>
+                        <li>
+                            <img src="http://placehold.it/175" alt="picture" />
+                            <h2>Prom</h2>
+                            <p>
+                                A very short exerpt goes here about proms
+                            </p>
                         </li>
                     </ul>
                 </div>
@@ -280,10 +310,9 @@
         </div>
         <hr />
         <div>
-            <div class="row">
-                <h2 id="contactsHeader">
-                    Contact</h2>
-                <div id="contact" class="twelve columns">
+            <div class="row-fluid">
+                <div id="contact" class="span12">
+                    <h2 id="contactsHeader">Contact</h2>
                     <div>
                         <p>
                         <p>
@@ -303,31 +332,28 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="three columns">
-                    <h3>
-                        Address:</h3>
+            <div class="row-fluid">
+                <div class="span3">
+                    <h3>Address:</h3>
                     1189 Waverly Place<br />
                     Schenectady NY, 12308
-                    <h3>
-                        Phone:</h3>
+                    <h3>Phone:</h3>
                     (518)335-4357
-                    <h3>
-                        Email:
+                    <h3>Email:
                     </h3>
                     <a href="mailto:david.ellinger@me.com">david.ellinger@me.com</a>
                 </div>
                 <!--<div class="one columns">-->
-                <div class="three columns">
+                <div class="span1">
                     <br />
                     <br />
                     <img src="http://placehold.it/120" />
                 </div>
-                <div class="three columns">
+                <div class="span3">
                     Send us a message
                     <ul>
                         <li class="field">Name
-                            <input class="text input" type="text" placeholder="Enter Name" /></li>
+                            <input class="text input" type="text" placeholder="Enter Name" required /></li>
                         <li class="field">Phone
                             <input class="phone input" type="tel" placeholder="Enter Phone" />
                         </li>
@@ -335,30 +361,15 @@
                             <input class="email input" type="email" placeholder="Enter Email" /></li>
                     </ul>
                 </div>
-                <!--        <div class ="three columns">
-            <p>
-                Send us a message
-            </p>
-            Name
-                <br />
-            <input type="text" id="name_contact" name="name_contact" placeholder="Enter Name"
-                required />
-            Phone<br />
-            <input type="tel" id="phone_contact" name="phone_contact" placeholder="Enter Phone"
-                required />
-            Email
-                <br />
-            <input type="email" id="email_contact" name="email_contact" placeholder="Enter Email"
-                required />
-        </div>-->
-                <!--<div class="push_two one columns">-->
-                <div class="three columns">
+
+                <div class="span3 offset1">
                     Message
                     <textarea class="input textarea" placeholder="Enter your message here..." rows="13"
-                        cols="35"></textarea>
+                        cols="35" required></textarea>
                     <br />
                     <div id="contactSubmitOuter" class="pretty medium default btn">
-                        <input id="contactSubmitInner" type="submit" value="Send!" /></div>
+                        <input id="contactSubmitInner" type="submit" value="Send!" />
+                    </div>
                 </div>
             </div>
         </div>
