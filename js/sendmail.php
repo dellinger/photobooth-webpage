@@ -1,9 +1,9 @@
 <?php
 // Who you want to recieve the emails from the form.
-$sendto = 'hepek@awerest.com';
+$sendto = 'david.ellinger@me.com';
 
 // The subject you'll see in your inbox
-$subject = 'A message from hepek service';
+$subject = 'Photobooth Contact Form ---';
 
 // Message for the user when he/she doesn't fill in the form correctly.
 $errormessage = 'Looks like you are missing some info. Try again.';
